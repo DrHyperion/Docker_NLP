@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname" style="text-align: center;">
+			Machine Learning Sentiment Analyzer 
+		</div>
+		<h2 style="text-align: center;">Texte Sentiment Analysis, Negative or Positive </h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container" style="text-align: center;">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter the text to test here :</p>
+		<textarea name="message" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Go">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
